@@ -1,0 +1,42 @@
+.badge {
+  border-radius: 200px;
+  height: 36px;
+  width: max-content;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 5px 15px 5px 5px;
+  align-items: center;
+
+  &_value {
+    height: 26px;
+    border-radius: 200px;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+
+    color: #FFFFFF;
+
+    &__primary {
+      background: #25AB75;
+    }
+  }
+
+  &_description {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+    margin-left: 15px;
+  }
+}

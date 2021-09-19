@@ -1,0 +1,24 @@
+.button {
+  min-width: 200px;
+  height: 70px;
+  background: rgba(255,255,255, 0.1);
+  border: none;
+  border-radius: 10px;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+
+  color: #FFFFFF;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &__primary {
+    background: #25AB75;;
+  }
+}

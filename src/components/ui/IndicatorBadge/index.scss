@@ -1,0 +1,36 @@
+.indicator-badge {
+  min-width: 166px;
+  min-height: 98px;
+  border-radius: 20px;
+  background: rgba(255,255,255, 0.1);
+  padding: 20px 30px;
+
+  &_value {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+
+    &__red {
+      color: #FB1351;
+    }
+
+    &__yellow {
+      color: #FFE642;
+    }
+  }
+
+  &_description {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 1px;
+
+    color: #FFFFFF;
+  }
+}
