@@ -1,0 +1,10 @@
+.icon {
+  display: inline-block;
+
+  &-logo {
+    background: url("../../../assets/workout.svg") center no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 22px;
+  }
+}

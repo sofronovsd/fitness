@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 40px;
+
+  &_label {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.navigation-panel {
+
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  &_item {
+    margin-right: 40px;
+
+    a {
+      text-transform: uppercase;
+      font-family: Poppins, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1.5px;
+      color: #FFFFFF;
+      opacity: 0.67;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
