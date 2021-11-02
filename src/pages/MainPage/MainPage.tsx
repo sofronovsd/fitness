@@ -4,6 +4,7 @@ import Button from '../../components/ui/Button';
 import './index.scss';
 import IndicatorBadge from '../../components/ui/IndicatorBadge';
 import Badge from '../../components/ui/Badge';
+import PopularExercisesSection from '../../components/PopularExercisesSection';
 
 const MainPage = () => {
   return (
@@ -20,7 +21,8 @@ const MainPage = () => {
             Exercise
           </h2>
           <p className="main-page_description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
           </p>
           <div className="main-page_buttons">
             <Button
@@ -44,6 +46,7 @@ const MainPage = () => {
         </div>
 
       </section>
+      <PopularExercisesSection/>
     </div>
   );
 };

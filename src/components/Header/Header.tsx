@@ -42,7 +42,7 @@ const Header = () => {
   const [links, setLinks] = useState(navigationLinks);
 
   useEffect(() => {
-    setLinks(navigationLinks.filter(link => link.label !== activePage.label));
+    // setLinks(navigationLinks.filter(link => link.label !== activePage.label));
   }, [activePage, links]);
 
   const handleNavigationItemClick = (link: NavigationLink) => {

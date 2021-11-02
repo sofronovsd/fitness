@@ -1,0 +1,18 @@
+.popular-exercises-section {
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_card-list {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 80px 40px;
+  }
+}
