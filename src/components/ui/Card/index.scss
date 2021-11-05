@@ -5,6 +5,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transform: rotateZ(0deg) scale(1);
+  transition: all 0.5s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: rotateZ(5deg) scale(1.1);
+  }
 
   &_image {
     top: 0;
@@ -12,7 +19,6 @@
     border-radius: 10px;
     height: 250px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, #000000 100%), url("../../../assets/cards/image 2.png") no-repeat;
     z-index: -1;
   }
 
@@ -39,5 +45,20 @@
     line-height: 14px;
     letter-spacing: 0.5px;
     opacity: 0.67;
+  }
+
+  &_corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 0 0 10px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    letter-spacing: 1.36667px;
   }
 }

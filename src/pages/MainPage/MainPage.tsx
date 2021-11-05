@@ -15,6 +15,7 @@ const MainPage = () => {
             type="new"
             color="primary"
             description="High Intensity workout to burn calories"
+            className="main-page_badge"
           />
           <h2 className="main-page_title">
             Cardio

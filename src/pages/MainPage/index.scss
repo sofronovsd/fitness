@@ -3,6 +3,8 @@
   &_wrapper {
     display: flex;
     flex-direction: column;
+    width: 1440px;
+    padding: 60px 0;
   }
 
   &_left-column {
@@ -14,8 +16,8 @@
   &_right-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 100px;
 
     > div {
       margin-bottom: 20px;
@@ -28,9 +30,14 @@
 
   &_exercise {
     background: url("../../assets/main_backround.png") right no-repeat;
-    height: 1000px;
-    width: 1440px;
+    box-shadow: 0 0 30px 30px black inset;
+    height: 740px;
     display: flex;
+    padding: 0 120px;
+  }
+
+  &_badge {
+    margin-bottom: 40px;
   }
 
   &_title {
