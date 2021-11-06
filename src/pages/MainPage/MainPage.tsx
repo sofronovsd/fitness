@@ -5,6 +5,7 @@ import './index.scss';
 import IndicatorBadge from '../../components/ui/IndicatorBadge';
 import Badge from '../../components/ui/Badge';
 import PopularExercisesSection from '../../components/PopularExercisesSection';
+import WorkoutSection from '../../components/WorkoutSection';
 
 const MainPage = () => {
   return (
@@ -48,6 +49,7 @@ const MainPage = () => {
 
       </section>
       <PopularExercisesSection/>
+      <WorkoutSection/>
     </div>
   );
 };

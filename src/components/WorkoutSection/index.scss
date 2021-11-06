@@ -1,0 +1,15 @@
+.workout-section {
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 120px;
+  }
+
+  &-images-grid {
+    display: grid;
+    grid-template:
+            ". . a a" 193px
+            "b . a a" 321px
+            ". c . ." 321px / 1fr 1fr 1fr 1fr;
+  }
+}
