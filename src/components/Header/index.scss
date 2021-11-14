@@ -4,6 +4,16 @@
   align-items: center;
   height: 100px;
   padding: 0 120px;
+  position: sticky;
+  top: 0;
+  background: black;
+  box-shadow: black 0 0 10px 10px;
+  z-index: 1000;
+  transition: 0.2s;
+
+  &__small {
+    height: 40px;
+  }
 
   &_label {
     font-family: Poppins, sans-serif;

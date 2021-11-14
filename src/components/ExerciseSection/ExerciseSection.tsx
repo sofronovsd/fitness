@@ -7,7 +7,10 @@ import './index.scss';
 
 const ExerciseSection = () => {
   return (
-    <section className="exercise-section">
+    <section
+      id="exercise-section"
+      className="exercise-section"
+    >
       <div className="exercise-section_left-column">
         <Badge
           type="new"

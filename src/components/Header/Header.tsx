@@ -12,15 +12,15 @@ type NavigationLink = {
 const navigationLinks: NavigationLink[] = [
   {
     label: 'Workout',
-    url: '/',
+    url: 'exercise-section',
   },
   {
     label: 'Exercises',
-    url: '/',
+    url: 'popular-exercises-section',
   },
   {
     label: 'Trainers',
-    url: '/',
+    url: 'workout-section',
   },
   {
     label: 'Pricing',
@@ -39,30 +39,62 @@ const navigationLinks: NavigationLink[] = [
 const Header = () => {
 
   const [activePage, setActivePage] = useState(navigationLinks[0]);
-  const [links, setLinks] = useState(navigationLinks);
 
-  useEffect(() => {
-    // setLinks(navigationLinks.filter(link => link.label !== activePage.label));
-  }, [activePage, links]);
-
-  const handleNavigationItemClick = (link: NavigationLink) => {
+  const handleNavigationItemClick = (e: React.MouseEvent<HTMLAnchorElement>, link: NavigationLink) => {
+    e.preventDefault();
     setActivePage(link);
+    document.getElementById(link.url)?.scrollIntoView({behavior: 'smooth', block: 'start'});
   };
 
+  useEffect(() => {
+    const handleOnScroll = () => {
+      const windowScrollTop = window.scrollY;
+      const header = document.getElementById('header');
+      if (windowScrollTop > 1) {
+        header?.classList.add('header__small');
+      } else {
+        if (header?.classList.contains('header__small')) {
+          header.classList.remove('header__small');
+        }
+      }
+      for (let i = 0; i < navigationLinks.length - 1; i++) {
+        const link1 = navigationLinks[i];
+        const link2 = navigationLinks[i + 1];
+        const linkElement1 = document.getElementById(link1.url);
+        const elementOffsetTop1 = linkElement1?.offsetTop;
+        const linkElement2 = document.getElementById(link2.url);
+        const elementOffsetTop2 = linkElement2?.offsetTop;
+        if (elementOffsetTop1 && elementOffsetTop1 <= windowScrollTop
+          && (elementOffsetTop2 && elementOffsetTop2 > windowScrollTop || !elementOffsetTop2)) {
+          setActivePage(link1);
+          break;
+        }
+      }
+    };
+    window.addEventListener('scroll', handleOnScroll);
+    return () => {
+      window.removeEventListener('scroll', handleOnScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
-      {/*<Icon className="icon-logo"/>*/}
+    <header
+      id="header"
+      className="header"
+    >
       <h1 className="header_label">
         {activePage.label}
       </h1>
       <nav className="navigation-panel">
         <ul>
-          {links.map(link => (
-            <li
-              className="navigation-panel_item"
-              onClick={() => handleNavigationItemClick(link)}
-            >
-              <Link to={link.url}>{link.label}</Link>
+          {navigationLinks.map(link => (
+            <li className="navigation-panel_item">
+              <a
+                href={`#${link.url}`}
+                onClick={(e) => handleNavigationItemClick(e, link)}
+              >
+                {link.label}
+              </a>
             </li>
           ))}
         </ul>

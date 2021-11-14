@@ -7,7 +7,10 @@ import './index.scss';
 
 const PopularExercisesSection = () => {
   return (
-    <section className="popular-exercises-section_wrapper">
+    <section
+      id="popular-exercises-section"
+      className="popular-exercises-section_wrapper"
+    >
       <Header/>
       <CardList/>
     </section>

@@ -9,7 +9,10 @@ import './index.scss';
 
 const WorkoutSection = () => {
   return (
-    <section className="workout-section_wrapper">
+    <section
+      id="workout-section"
+      className="workout-section_wrapper"
+    >
       <div className="workout-section">
         <div className="workout-section_flash" />
         <div className="workout-section_rect" />
